@@ -1,0 +1,41 @@
+<style>
+    .search-box {
+        display: inline-block;
+    }
+
+    .search-box input {
+        padding: 5px 10px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        width: 150px;
+        font-size: 14px;
+        outline: none;
+        transition: all 0.3s;
+    }
+
+    .search-box input:focus {
+        border-color: #007bff;
+        width: 180px; /* Membesar saat fokus */
+    }
+
+    .search-box svg {
+            position: absolute;
+            left: 10px;  /* Tempatkan ikon di kiri input */
+            top: 50%;
+            transform: translateY(-50%);
+            width: 16px;
+            height: 16px;
+        }
+</style>
+
+<body>
+    <div class="search-box">
+        <input type="text" placeholder="Search...">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="search-icon">
+            <path fill-rule="evenodd" d="M9 2a7 7 0 1 0 4.68 11.69l4.32 4.31a1 1 0 1 0 1.42-1.41l-4.31-4.31A7 7 0 0 0 9 2zm0 2a5 5 0 1 1 0 10 5 5 0 0 1 0-10z" clip-rule="evenodd"/>
+        </svg>
+    </div>
+    <h2>Premium sound, unmatched style.</h2>
+    <span>Discover the perfect blend of high-fidelity sound and sleek design. Elevate your listening experience with headphones crafted for music lovers and audiophiles alike.</span>
+</body>
+</html>
