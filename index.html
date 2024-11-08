@@ -1,41 +1,163 @@
 <style>
+    @import url('https://fonts.googleapis.com/css2?family=Jaldi:wght@400;700&family=Montserrat&family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap');
+
+    body {
+        font-family: "Jaldi", sans-serif;
+        background-color: #EDF9FF;
+    }
+
     .search-box {
         display: inline-block;
+        position: absolute;
+        top: 40px;
+        right: 70px;
     }
 
-    .search-box input {
-        padding: 5px 10px;
+    .search-box input[type="text"] {
+        padding: 10px 20px;
+        padding-left: 35px;
         border: 1px solid #ccc;
-        border-radius: 4px;
-        width: 150px;
+        border-radius: 10px;
+        width: 350px;
         font-size: 14px;
         outline: none;
-        transition: all 0.3s;
-    }
-
-    .search-box input:focus {
-        border-color: #007bff;
-        width: 180px; /* Membesar saat fokus */
+        transition: border-color 0.3s;
     }
 
     .search-box svg {
-            position: absolute;
-            left: 10px;  /* Tempatkan ikon di kiri input */
-            top: 50%;
-            transform: translateY(-50%);
-            width: 16px;
-            height: 16px;
-        }
-</style>
+        position: absolute;
+        left: 10px;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 16px;
+        height: 16px;
+        fill: #aaa;
+    }
 
+    .eshop-header {
+        position: absolute;
+        top: 40px;
+        left: 70px;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        font-family: Arial, sans-serif;
+        font-size: 20px;
+        color: #6E6E6E;
+    }
+
+    .cart-icon {
+        height: 30px;
+        width: auto;
+        display: inline-block;
+        color: #6E6E6E;
+    }
+
+    .eshop-title {
+        font-weight: bold;
+        color: #6E6E6E;
+    }
+
+    .judul {
+        color: #6E6E6E;
+        position: absolute;
+        top: 15%;
+        left: 10%;
+        line-height: 65px;
+        font-size: 45px;
+    }
+
+    .teks {
+        position: absolute;
+        top: 45%;
+        left: 10%;
+    }
+
+    .foto {
+        position: absolute;
+        top: 15%;
+        right: 70px;
+    }
+
+    button {
+        position: absolute;
+        top: 60%;
+        left: 10%;
+        padding: 14px 20px;
+        border-radius: 10px;
+        border: none;
+        box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.25);
+        font-size: 25px;
+        font-weight: bold;
+        background-color: #F5F2F2;
+        color: #6E6E6E;
+    }
+
+    .fitur {
+        display: inline-block;
+        transform: rotate(-90deg);
+        position: relative;
+        /* Menggunakan positioning relatif */
+        top: 90%;
+        color: #6E6E6E;
+        font-weight: bold;
+        font-size: 35px;
+        /* Geser elemen ke bawah */
+        left: 6.5%;
+    }
+
+    .katalogsec {
+        display: flex;
+        justify-content: space-around;
+        grid-template-columns: repeat(3, 1fr);
+        left: 10%;
+        position: absolute;
+        top: 100%;
+    }
+</style>
 <body>
+    <div class="eshop-header">
+        <img class="cart-icon" src="images/cart.png" alt="retail icon" title="retail icon">
+        <span class="eshop-title">E-SHOP</span>
+    </div>
     <div class="search-box">
-        <input type="text" placeholder="Search...">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="search-icon">
-            <path fill-rule="evenodd" d="M9 2a7 7 0 1 0 4.68 11.69l4.32 4.31a1 1 0 1 0 1.42-1.41l-4.31-4.31A7 7 0 0 0 9 2zm0 2a5 5 0 1 1 0 10 5 5 0 0 1 0-10z" clip-rule="evenodd"/>
+        <input type="text">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+            <path fill-rule="evenodd"
+                d="M9 2a7 7 0 1 0 4.68 11.69l4.32 4.31a1 1 0 1 0 1.42-1.41l-4.31-4.31A7 7 0 0 0 9 2zm0 2a5 5 0 1 1 0 10 5 5 0 0 1 0-10z"
+                clip-rule="evenodd" />
         </svg>
     </div>
-    <h2>Premium sound, unmatched style..</h2>
-    <span>Discover the perfect blend of high-fidelity sound and sleek design. Elevate your listening experience with headphones crafted for music lovers and audiophiles alike.</span>
+
+    <div class="judul">
+        <h2>Premium sound,<br> unmacthed style</h2>
+    </div>
+
+    <span class="teks">Discover the perfect blend of high-fidelity sound and sleek design.<br>Elevate your listening
+        experience with headphones crafted for music lovers and audiophiles alike.</span>
+
+    <img class="foto" src="images/image1.png" alt="" height="500px">
+
+    <button type="button">EXPLORE</button>
+
+    <span class="fitur">Featured</span>
+    <div class="katalogsec">
+    <div>
+        <img src="images/59e57eda97616eaa68dc3502e081132d 1.png" alt="">
+        <h3>JBL Headphones</h3>
+        <span>Rp. 899.500,00</span>
+    </div>
+    <div>
+        <img src="images/bbfb32b610594b070caf2dcbdc6a6c2d 1.png" alt="">
+        <h3>Bose Headphones</h3>
+        <span>Rp. 899.500,00</span>
+    </div>
+    <div>
+        <img src="images/dbf9f65bfb4106bcb89279acb3fa76e0 1.png" alt="">
+        <h3>JBL White Headphones</h3>
+        <span>Rp. 899.500,00</span>
+    </div>
+
 </body>
+
 </html>
