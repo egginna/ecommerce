@@ -69,8 +69,9 @@
 
     .teks {
         position: absolute;
-        top: 45%;
+        top: 40%;
         left: 10%;
+        font-size: 20px;
     }
 
     .foto {
@@ -97,24 +98,67 @@
         display: inline-block;
         transform: rotate(-90deg);
         position: relative;
-        /* Menggunakan positioning relatif */
-        top: 90%;
+        top: 100%;
         color: #6E6E6E;
         font-weight: bold;
         font-size: 35px;
-        /* Geser elemen ke bawah */
-        left: 6.5%;
+        left: 10%;
     }
 
-    .katalogsec {
+    .featured-section {
+        padding: 20px;
+        position: absolute;
+        top: 80%;
+        left: 16%;
+    }
+
+    .featured-items {
         display: flex;
         justify-content: space-around;
-        grid-template-columns: repeat(3, 1fr);
-        left: 10%;
+        align-items: center;
+    }
+
+    .featured-item {
+        text-align: center;
+        padding: 10px;
+        background-color: #F5F2F2;
+        border-radius: 10px;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        width: 250px;
+        height: 150px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-end;
+        margin: 40px;
+    }
+
+    .featured-item img {
+        max-width: 130px;
+        height: auto;
+        margin-bottom: 10px;
+    }
+
+    .featured-item p {
+        margin: 5px 0;
+    }
+
+    .featured-label {
+        writing-mode: vertical-rl;
+        transform: rotate(180deg);
+        font-weight: bold;
+        margin-right: 20px;
+        color: #4a4a4a;
+    }
+    .next{
         position: absolute;
-        top: 100%;
+        left: 100%;
+    }
+    .next img{
+        width: 90px;
     }
 </style>
+
 <body>
     <div class="eshop-header">
         <img class="cart-icon" src="images/cart.png" alt="retail icon" title="retail icon">
@@ -141,21 +185,28 @@
     <button type="button">EXPLORE</button>
 
     <span class="fitur">Featured</span>
-    <div class="katalogsec">
-    <div>
-        <img src="images/59e57eda97616eaa68dc3502e081132d 1.png" alt="">
-        <h3>JBL Headphones</h3>
-        <span>Rp. 899.500,00</span>
-    </div>
-    <div>
-        <img src="images/bbfb32b610594b070caf2dcbdc6a6c2d 1.png" alt="">
-        <h3>Bose Headphones</h3>
-        <span>Rp. 899.500,00</span>
-    </div>
-    <div>
-        <img src="images/dbf9f65bfb4106bcb89279acb3fa76e0 1.png" alt="">
-        <h3>JBL White Headphones</h3>
-        <span>Rp. 899.500,00</span>
+
+    <div class="featured-section">
+        <div class="featured-items">
+            <div class="featured-item">
+                <img src="images/59e57eda97616eaa68dc3502e081132d 1.png" alt="JBL headphones">
+                <p>JBL headphones</p>
+                <p>Rp. 899.500,00</p>
+            </div>
+            <div class="featured-item">
+                <img src="images/bbfb32b610594b070caf2dcbdc6a6c2d 1.png" alt="Bose headphones">
+                <p>Bose headphones</p>
+                <p>Rp. 899.500,00</p>
+            </div>
+            <div class="featured-item">
+                <img src="images/dbf9f65bfb4106bcb89279acb3fa76e0 1.png" alt="JBL White headphones">
+                <p>JBL White headphones</p>
+                <p>Rp. 899.500,00</p>
+            </div>
+            <div class="next">
+                <img src="images/next.png" alt="">
+            </div>
+        </div>
     </div>
 
 </body>
